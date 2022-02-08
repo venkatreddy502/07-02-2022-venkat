@@ -1,0 +1,41 @@
+#include<stdio.h>  
+#include <string.h> 
+#define n 100 
+  
+struct student{    
+int rollno;    
+char name[10];   
+int m1,m2,m3; 
+};    
+int main(){    
+int i;    
+struct student st[n];    
+printf("Enter Records of 5 students");    
+for(i=0;i<5;i++){    
+printf("\nEnter Rollno:");    
+scanf("%d",&st[i].rollno);    
+printf("\nEnter Name:");    
+scanf("%s",&st[i].name);    
+printf("\nEnter subject1 marks:");    
+scanf("%d",&st[i].m1);    
+printf("\nEnter Subject2 marks:");    
+scanf("%d",&st[i].m2);    
+printf("\nEnter subject3 marks:");    
+scanf("%d",&st[i].m3);    
+
+
+}    
+printf("\nStudent Information List:");    
+for(i=0;i<5;i++){    
+printf("\nRollno:%d",st[i].rollno); 
+printf("\n Name:%s",st[i].name);
+printf("\n subject1:%d",st[i].m1);
+printf("\n subject2:%d",st[i].m2);
+printf("\n subject3:%d",st[i].m3);
+if(st[i].m1>=34 && st[i].m2>=34 && st[i].m3>=34  )   
+printf("pass");
+else
+printf("Fail");
+}    
+   return 0;    
+}
